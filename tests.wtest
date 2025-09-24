@@ -1,0 +1,15 @@
+import game.*
+import objetos.*
+describe "test de futbol" {
+
+    method initialize() {
+      	game.cellSize(40)
+        game.width(15)
+        game.height(10)  
+    }
+    test "buscarla" {
+        assert.notEquals(pelota.position(), lionel.position())
+        lionel.buscarla()
+        assert.equals(pelota.position(), lionel.position())
+    }
+} 
