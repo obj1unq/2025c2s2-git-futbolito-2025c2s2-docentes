@@ -1,0 +1,17 @@
+import objetos.*
+import game.*
+
+describe "test de futbolito" {
+    method initialize() {
+        game.cellSize(40)
+        game.width(15)
+        game.height(10)
+    }
+    test "ir al origen" {
+        const origen = game.at(0,5)
+        assert.notEquals(origen, pelota.position())
+        pelota.irAOrigen()
+        assert.equals(origen, pelota.position())
+    }
+
+}
