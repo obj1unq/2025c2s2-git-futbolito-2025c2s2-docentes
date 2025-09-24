@@ -12,4 +12,10 @@ describe "test de futbol" {
         lionel.buscarla()
         assert.equals(pelota.position(), lionel.position())
     }
+    test "ir al origen" {
+        const origen = game.at(0,5)
+        assert.notEquals(origen, pelota.position())
+        pelota.irAOrigen()
+        assert.equals(origen, pelota.position())
+    }
 } 
